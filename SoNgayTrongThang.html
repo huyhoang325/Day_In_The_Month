@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day Of The Month</title>
+</head>
+<body>
+<h1><b>Days Number Of The Month</b></h1>
+<table>
+    <tr>
+        <td>
+            <input id="thang" type="text">
+            <input type="button" value="Tính Số Ngày" onclick="result()">
+        </td>
+    </tr>
+</table>
+<p id="demo" ></p>
+<script>
+    function result() {
+        let m = parseInt(thang.value);
+        switch (m) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 9:
+            case 11:
+                let text1 = "Tháng "+ m + " có 31 ngày";
+                document.getElementById("demo").innerHTML = text1;
+                break;
+            case 2:
+                let text2 = "Tháng "+ m + " có 28 hoặc 29 ngày";
+                document.getElementById("demo").innerHTML = text2;
+                break;
+            case 4:
+            case 6:
+            case 8:
+            case 10:
+            case 12:
+                let text3 = "Tháng "+ m + " có 30 ngày";
+                document.getElementById("demo").innerHTML = text3;
+                break;
+            default:
+                alert('Tháng ' + m +' không tồn tại')
+        }
+    }
+</script>
+</body>
+</html>
